@@ -21,7 +21,7 @@ Here' a storage provider shape assuming these terms, aternates without the terms
   schema:softwareAddOn [
     schema:name "NSS Fork" ;      
     a new:SolidStorageServer ;
-    doap:license "MIT" ;
+    doap:license "?" ;
     doap:repository <https://github.com/OpenLinkSoftware/node-solid-server> ;
   ] .
 ```
