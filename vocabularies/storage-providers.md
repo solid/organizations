@@ -1,32 +1,27 @@
 Here's my proposed minimum shape for a Solid Storage Provider.  
 
-The easiest way is to introduce new terms :
+The easiest way is to introduce new terms. I will provisionally use soar: as the prefix for these proposed terms - Solid Oraganizations and Resources vocabulary.
 
-* `SolidStorageService` -  the storage provider 
-* `SolidStorageServer` -  the server software used by the SolidStorageService
-
-Here' a storage provider shape assuming these terms, aternates without the terms posted below. 
+Here' a storage provider shape assuming some proposed terms, alternates without the terms posted below. 
 
 ```turtle
 <#openLink>
-  schema:name "Open Link Read-Write Storage" ;
-  a new:SolidStorageService ;
+  schema:name "Open Link Read-Write Storage" ;                  # the service
+  a soar:SolidStorageService ;
   doap:service-endpoint <https://solid.openlinsw.com:8444> ;
   schema:isFree "?" ;
   schema:provider [
-    a schema:Organization ;
-    schema:name "Open Link Software" ;
+    schema:name "Open Link Software" ;                           # the providing organization
+    a schema:Organization, soar:SolidStorageProvider ;
     schema:url <https://www.openlinksw.com/> 
   ] ;
-  schema:softwareAddOn [
-    schema:name "NSS Fork" ;      
-    a new:SolidStorageServer ;
+  soar:implementedUsing [
+    schema:name "NSS Fork" ;                                     # the software 
+    a soar:SolidStorageServer ;
     doap:license "?" ;
     doap:repository <https://github.com/OpenLinkSoftware/node-solid-server> ;
   ] .
 ```
-
-I am not happy with `schema:softwareAddon` any better ideaas?
 
 If we do not use the proposed new terms, this is the closest I can come to replacing them
 using the [product ontology](http://www.productontology.org/).
