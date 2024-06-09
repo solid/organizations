@@ -21,7 +21,7 @@ Here' a storage provider shape assuming some proposed terms, alternates without 
     doap:license "?" ;
     doap:repository <https://github.com/OpenLinkSoftware/node-solid-server> ;
     schema:provider [
-      schema:Name "Solid Team" ;                                # the software-providing organization
+      schema:Name "Open Link Software" ;                       # the software-providing organization
       a soar:SolidStorageServerProvider ;                      
     ];
   ] ;
