@@ -26,7 +26,7 @@ Here' a storage provider shape assuming some proposed terms, alternates without 
     ];
   ] ;
   soar:hostingPlatform [                                       # note doap:platform means something else, do not use
-      schema:name "Amazon Web Services" ;                      # the hosting platform
+      schema:name "Amazon Web Services" ;                      # the hosting platform (not accurate for Open Link)
   ] .
 ```
 
