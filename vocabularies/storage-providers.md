@@ -26,7 +26,7 @@ Here' a storage provider shape assuming some proposed terms, alternates without 
     ];
   ] ;
   doap:platform [
-    schema:name "AWS" ;                                         # the platform
+    schema:name "AWS" ;                                         # the platform ( note: not accurate for Open Link)
     schema:provider [
       schema:name "Amazon" ;                                    # the platform-providing organization
     ]
