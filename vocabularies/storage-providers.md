@@ -25,11 +25,8 @@ Here' a storage provider shape assuming some proposed terms, alternates without 
       a soar:SolidStorageServerProvider ;                      
     ];
   ] ;
-  doap:platform [
-    schema:name "AWS" ;                                         # the platform ( note: not accurate for Open Link)
-    schema:provider [
-      schema:name "Amazon" ;                                    # the platform-providing organization
-    ]
+  soar:hostingPlatform [                                       # note doap:platform means something else, do not use
+      schema:name "Amazon Web Services" ;                      # the hosting platform
   ] .
 ```
 
