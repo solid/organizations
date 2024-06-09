@@ -11,15 +11,25 @@ Here' a storage provider shape assuming some proposed terms, alternates without 
   doap:service-endpoint <https://solid.openlinsw.com:8444> ;
   schema:isFree "?" ;
   schema:provider [
-    schema:name "Open Link Software" ;                           # the providing organization
-    a schema:Organization, soar:SolidStorageProvider ;
+    schema:name "Open Link Software" ;                          # the service-providing organization
+    a schema:Organization, soar:SolidStorageServiceProvider ;
     schema:url <https://www.openlinksw.com/> 
   ] ;
   soar:implementedUsing [
-    schema:name "NSS Fork" ;                                     # the software 
+    schema:name "NSS Fork" ;                                    # the software 
     a soar:SolidStorageServer ;
     doap:license "?" ;
     doap:repository <https://github.com/OpenLinkSoftware/node-solid-server> ;
+    schema:provider [
+      schema:Name "Solid Team" ;                                # the software-providing organization
+      a soar:SolidStorageServerProvider ;                      
+    ];
+  ] ;
+  doap:platform [
+    schema:name "AWS" ;                                         # the platform
+    schema:provider [
+      schema:name "Amazon" ;                                    # the platform-providing organization
+    ]
   ] .
 ```
 
